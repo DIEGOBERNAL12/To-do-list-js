@@ -1,0 +1,155 @@
+/* Tipografias */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f1e, #262672);
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+#global-contents {
+  background: #151528;
+  padding: 25px;
+  border-radius: 15px;
+  width: 100%;
+  height: 500px;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid #0f0f1e;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #dbdbdb;
+}
+
+/* Inputs y botones */
+form {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e1e2f;
+  color: #fff;
+  font-size: 1rem;
+}
+
+form input::placeholder {
+  color: #9393ad;
+}
+
+form button {
+  padding: 10px 15px;
+  border: none;
+  background: #441de0;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form button:hover {
+  background: #5a3dff;
+}
+
+/* esta es la parte para eliminar una lista */
+.delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.bi-x {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: red;
+  color: #fff;
+  width: 28px;   /* tamaño fijo circular */
+  height: 28px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease; /* animación suave */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.bi-x:hover {
+  background: #fff;
+  color: rgb(163, 4, 4);
+  transform: scale(1.1); /* efecto de crecer un poco */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Listas de tareas */
+#cont-to-do-list,
+#cont-chet {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itm-to-do {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1e1e2f;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.itm-to-do:hover {
+  transform: translateX(5px);
+  background: #22223a;
+}
+
+.itm-to-do input[type="checkbox"] {
+  accent-color: #000000; /* color del check */
+  transform: scale(1.3);
+  cursor: pointer;
+  color: #fff;
+}
+
+.itm-to-do p {
+  flex: 1;
+  margin: 0;
+  font-size: 1rem;
+  word-break: break-word;
+}
