@@ -71,3 +71,16 @@ function iventsToItem(item){
     })
 }
 
+const btnStyle = document.getElementById('change-style');
+btnStyle.addEventListener('click', () => {
+    const linckCss = document.getElementById('enlace-estilos');
+
+    if (linckCss.getAttribute('href') === 'css/style.css') {
+        linckCss.setAttribute('href', 'css/style-noche.css');
+        btnStyle.textContent = 'Modo Noche';
+    } else {
+        linckCss.setAttribute('href', 'css/style.css');
+        btnStyle.textContent = 'Modo Dia';
+    }
+})
+
