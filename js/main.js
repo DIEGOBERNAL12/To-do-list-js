@@ -82,5 +82,23 @@ btnStyle.addEventListener('click', () => {
         linckCss.setAttribute('href', 'css/style.css');
         btnStyle.textContent = 'Modo Dia';
     }
-})
+});
+
+// Permitir agregar tarea presionando la tecla Enter en el input
+input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault(); //Evita que el form se envíe y cause el alert extra
+        const textoItem = input.value.trim();
+        if (textoItem === "") {
+            alert("No se puede crear una tarea vacía");
+        } else {
+            const newItem = createToDoItem(textoItem);
+            toDoList.appendChild(newItem);
+            iventsToItem(newItem);
+            input.value = "";
+        }
+    }
+});
+
+
 
