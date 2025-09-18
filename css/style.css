@@ -88,33 +88,16 @@ form button:hover {
 
 /* esta es la parte para eliminar una lista */
 .delete {
-  background: transparent;
+  background: red;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
   display: inline-flex; 
   align-items: center;
   justify-content: center;
-}
-
-.bi-x {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: red;
-  color: #fff;
-  width: 28px;   /* tamaño fijo circular */
-  height: 28px;
-  font-size: 1.1rem;
-  transition: all 0.3s ease; /* animación suave */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.bi-x:hover {
-  background: #fff;
-  color: rgb(163, 4, 4);
-  transform: scale(1.1); /* efecto de crecer un poco */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  color: #f5f5f5;
 }
 
 /* Listas de tareas */
