@@ -11,7 +11,7 @@ const completedList = document.getElementById('cont-to-do-completed');
 function createToDoItem(textoItem){
     //Creamos el nodo o elemento padre o contenedor
     const item = document.createElement('div');
-        item.classList.add = ('item-to-do');
+        item.classList.add('item-to-do');
 
     //Creamos el nodo hijo del input y leagregamos el type checkbox
     const checkbox = document.createElement('input');
@@ -33,4 +33,19 @@ function createToDoItem(textoItem){
     //Utilizamos el return para dar respuesta al elemento creado ya que lo vamos a usar mas adelante
     return item;
 }
+
+// Detectamos el evento click con un evento de escucha, sobre el boton + 
+//Para que a partir de ese evento se agregue la tarea dentro del contenedor
+addBtn.addEventListener('click', () => {
+    const textoItem = input.value.trim()
+    if (textoItem == "") {
+        alert("No se puede crear una tarea vacia");
+    } else {
+        const newItem = createToDoItem(textoItem);
+        toDoList.appendChild(newItem);
+        input.value = "";
+    }
+});
+
+//L asiguiente funcion nos permitira agregar el funcionamiento principal sobre las tareas
 
